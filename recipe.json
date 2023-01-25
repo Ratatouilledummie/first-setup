@@ -118,6 +118,28 @@
                 }
             ]
         },
+        "firefox": {
+            "template": "yes-no",
+            "icon": "web-browser-symbolic.svg",
+            "title": "Firefox",
+            "description": "Choose whether to install Firefox Browser.",
+            "buttons": {
+                "yes": "Install",
+                "no": "Skip",
+                "info": {
+                    "type": "text",
+                    "title": "Firefox",
+                    "text": "Firefox is a libre browser developed and maintained by Mozilla Foundation. Firefox is a fast, secure and intuitive browser"
+                }
+            },
+            "final": [
+                {
+                    "if": "firefox",
+                    "type": "command",
+                    "commands": ["!nextBoot flatpak install -y org.mozilla.firefox || snap install firefox"]
+                }
+            ]
+        },
         "apps": {
             "template": "applications",
             "icon": "org.gnome.Software-symbolic",
